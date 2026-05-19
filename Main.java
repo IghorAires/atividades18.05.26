@@ -1,13 +1,21 @@
+class Livro {
+    String titulo;
+    String autor;
+    int numPaginas;
+    public Livro(String titulo, String autor, int numPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
+    }
+    public void exibirInformacoes() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Número de páginas: " + numPaginas);
+    }
+}
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.println("Olá e bem vindo Sr Ighor!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Livro livro1 = new Livro("Dom Casmurro", "Machado de Assis", 256);
+        livro1.exibirInformacoes();
     }
 }
